@@ -28,45 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.inword = new System.Windows.Forms.Button();
-            this.innum = new System.Windows.Forms.Button();
+            this.inputformbox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // inword
+            // inputformbox
             // 
-            this.inword.Location = new System.Drawing.Point(323, 128);
-            this.inword.Name = "inword";
-            this.inword.Size = new System.Drawing.Size(75, 23);
-            this.inword.TabIndex = 0;
-            this.inword.Text = "Word";
-            this.inword.UseVisualStyleBackColor = true;
+            this.inputformbox.FormattingEnabled = true;
+            this.inputformbox.Items.AddRange(new object[] {
+            "Number",
+            "Word"});
+            this.inputformbox.Location = new System.Drawing.Point(88, 12);
+            this.inputformbox.Name = "inputformbox";
+            this.inputformbox.Size = new System.Drawing.Size(121, 21);
+            this.inputformbox.TabIndex = 0;
+            this.inputformbox.Text = "choose";
+            this.inputformbox.SelectedIndexChanged += new System.EventHandler(this.Inputformbox_SelectedIndexChanged);
             // 
-            // innum
+            // label1
             // 
-            this.innum.Location = new System.Drawing.Point(330, 231);
-            this.innum.Name = "innum";
-            this.innum.Size = new System.Drawing.Size(75, 23);
-            this.innum.TabIndex = 1;
-            this.innum.Text = "number";
-            this.innum.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Form of input";
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(229, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Add counter";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.innum);
-            this.Controls.Add(this.inword);
+            this.ClientSize = new System.Drawing.Size(984, 562);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.inputformbox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Counter";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button inword;
-        private System.Windows.Forms.Button innum;
+        private System.Windows.Forms.ComboBox inputformbox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -11,7 +11,7 @@ namespace counterMulti.Resource
     {
         public Counter()
         {
-            int index;
+            int index = 0;
         }
     }
 
